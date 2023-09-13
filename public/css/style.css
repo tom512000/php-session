@@ -1,0 +1,54 @@
+html {
+    height: 100%;
+    background-color: #24391d;
+    display: flex;
+}
+body {
+    flex: 1;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: #5ba95b;
+    color: #ddd;
+}
+.header {
+}
+.header__title {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+    padding: .5em 1em;
+}
+.footer {
+}
+.content {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #36562c;
+    border-radius: 3px;
+    margin: 0 3px;
+    padding: .5em;
+}
+.country-selector {
+    display: flex;
+    gap: 0.5em;
+}
+
+a:link, a:visited, a:active {
+    color: white;
+}
+
+.error:before {
+    content: '⚠';
+    color: darkred;
+    background-color: white;
+    padding: 0 0.5em;
+}
+
+.success:before {
+    content: '🆗';
+    color: green;
+    background-color: white;
+    padding: 0 0.5em;
+}
