@@ -17,5 +17,11 @@
             "email": "tom.sikora@etudiant.univ-reims.fr"
         }
     ],
-    "require": {}
+    "require": {
+
+    },
+    "scripts": {
+        "test:cs": "php vendor/bin/php-cs-fixer fix --dry-run",
+        "fix:cs": "php vendor/bin/php-cs-fixer fix"
+    }
 }
