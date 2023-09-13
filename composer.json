@@ -22,6 +22,12 @@
     },
     "scripts": {
         "test:cs": "php vendor/bin/php-cs-fixer fix --dry-run",
-        "fix:cs": "php vendor/bin/php-cs-fixer fix"
+        "fix:cs": "php vendor/bin/php-cs-fixer fix",
+        "start:linux": "bin/run-server.sh",
+        "start:windows": "bin/run-sever.bat",
+        "start": "@start:linux"
+    },
+    "config": {
+        "process-timeout": 0
     }
 }
