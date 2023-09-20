@@ -21,4 +21,3 @@ $webPage->appendContent(
 );
 
 echo $webPage->toHTML();
-
