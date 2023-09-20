@@ -13,9 +13,9 @@ class Session
      */
     public static function start()
     {
-        if (session_status() === PHP_SESSION_ACTIVE) {
+        if (PHP_SESSION_ACTIVE === session_status()) {
             return PHP_SESSION_ACTIVE;
-        } elseif (session_status() === PHP_SESSION_NONE) {
+        } elseif (PHP_SESSION_NONE === session_status()) {
             if (headers_sent()) {
                 throw new SessionException('Impossible de modifier les entêtes HTTP.');
             } else {
@@ -26,7 +26,7 @@ class Session
                     throw new SessionException('Démarrage de la session impossible.');
                 }
             }
-        } elseif (session_status() === PHP_SESSION_DISABLED) {
+        } elseif (PHP_SESSION_DISABLED === session_status()) {
             throw new SessionException('La session est désactivée.');
         } else {
             throw new SessionException('Démarrage impossible.');

@@ -6,7 +6,6 @@ namespace Entity\Collection;
 
 use Database\MyPdo;
 use Entity\Country;
-use PDO;
 
 class CountryCollection
 {
@@ -25,7 +24,8 @@ class CountryCollection
         SQL
         );
         $stmt->execute();
-        $stmt->setFetchMode(PDO::FETCH_CLASS, Country::class);
+        $stmt->setFetchMode(\PDO::FETCH_CLASS, Country::class);
+
         return $stmt->fetchAll();
     }
 }

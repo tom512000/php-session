@@ -15,33 +15,21 @@ class CountryFlag
         $this->baseUrl = $baseUrl;
     }
 
-    /**
-     * @return string
-     */
     public function getCode(): string
     {
         return $this->code;
     }
 
-    /**
-     * @param string $code
-     */
     public function setCode(string $code): void
     {
         $this->code = $code;
     }
 
-    /**
-     * @return string
-     */
     public function getBaseUrl(): string
     {
         return $this->baseUrl;
     }
 
-    /**
-     * @param string $baseUrl
-     */
     public function setBaseUrl(string $baseUrl): void
     {
         $this->baseUrl = $baseUrl;
