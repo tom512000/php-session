@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Html\AppWebPage;
 use Html\Form\SessionManagedCountrySelect;
+use Html\CountryFlag;
 
 $webPage = new AppWebPage('Country selector');
 
@@ -15,10 +16,13 @@ $select = new SessionManagedCountrySelect('country', 'Pays', 'fr');
 
 //$webPage->appendContent('<pre>' . print_r($_SESSION, true) . '</pre>');
 
+$countryFlag = new CountryFlag($select->getSelectedCode(), "./img/flags/{$select->getSelectedCode()}.png");
+
 $webPage->appendContent(
     <<<HTML
     <form class="country-selector">
         {$select->toHtml()}
+        {$countryFlag->toHtml()}
         <input type="submit" value="Choisir">
     </form>
     HTML
