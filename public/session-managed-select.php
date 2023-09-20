@@ -9,9 +9,9 @@ $webPage = new AppWebPage('Country selector');
 
 $select = new SessionManagedCountrySelect('country', 'Pays', 'fr');
 
-$select->setSelectedFromSession();
-$select->setSelectedCodeFromRequest();
-$select->saveSelectedIntoSession();
+//$select->setSelectedCodeFromSession();
+//$select->setSelectedCodeFromRequest();
+//$select->saveSelectedCodeIntoSession();
 
 //$webPage->appendContent('<pre>' . print_r($_SESSION, true) . '</pre>');
 
@@ -25,4 +25,3 @@ $webPage->appendContent(
 );
 
 echo $webPage->toHTML();
-
