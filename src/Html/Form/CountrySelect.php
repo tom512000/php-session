@@ -56,7 +56,7 @@ class CountrySelect
         // de la propriété "name"
         if (isset($_REQUEST[$this->name])) {
             // si elle est non vide
-            if (0 != strlen($_REQUEST[$this->name])) {
+            if (strlen($_REQUEST[$this->name]) != 0) {
                 // affecte la propriété « selectedCode » avec la valeur
                 $this->selectedCode = $_REQUEST[$this->name];
             }

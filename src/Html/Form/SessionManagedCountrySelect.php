@@ -14,8 +14,8 @@ class SessionManagedCountrySelect extends CountrySelect
      */
     public function __construct(string $name, string $firstOption, string $selectedCode)
     {
-        parent::__construct($name, $firstOption, $selectedCode);
         Session::start();
+        parent::__construct($name, $firstOption, $selectedCode);
         $this->setSelectedCodeFromSession();
         $this->setSelectedCodeFromRequest();
         $this->saveSelectedCodeIntoSession();
@@ -23,13 +23,13 @@ class SessionManagedCountrySelect extends CountrySelect
 
     public function saveSelectedCodeIntoSession()
     {
-        $_SESSION[$this->getSelectedCode()] = $this->getSelectedCode();
+        $_SESSION[$this->getName()] = $this->getSelectedCode();
     }
 
     public function setSelectedCodeFromSession(): void
     {
-        if (isset($_SESSION[$this->getSelectedCode()])) {
-            $this->setSelectedCode($_SESSION[$this->getSelectedCode()]);
+        if (isset($_SESSION[$this->getName()])) {
+            $this->setSelectedCode($_SESSION[$this->getName()]);
         }
     }
 }
